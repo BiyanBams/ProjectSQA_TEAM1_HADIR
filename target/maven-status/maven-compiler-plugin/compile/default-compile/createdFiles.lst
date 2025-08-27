@@ -1,7 +1,0 @@
-com\juaracoding\hadir\pages\DownloadAbsenPage.class
-com\juaracoding\hadir\pages\LaporanKoreksiPage.class
-com\juaracoding\hadir\pages\ImportStrukturUserPage.class
-com\juaracoding\hadir\utils\DriverManager.class
-com\juaracoding\hadir\utils\DriverUtil.class
-com\juaracoding\hadir\pages\ImportStatusAktifPage.class
-com\juaracoding\hadir\pages\LoginPage.class

@@ -1,7 +1,0 @@
-com\juaracoding\hadir\definitions\importfeature\ImportStatusAktifSteps.class
-com\juaracoding\hadir\definitions\laporanfeature\LaporanKoreksiSteps.class
-com\juaracoding\hadir\definitions\hooks\Hook.class
-com\juaracoding\hadir\runners\RunnerTest.class
-com\juaracoding\hadir\definitions\importfeature\ImportStrukturUserSteps.class
-com\juaracoding\hadir\definitions\cummonsteps\CummonSteps.class
-com\juaracoding\hadir\definitions\downloadabsen\DownloadAbsenSteps.class
