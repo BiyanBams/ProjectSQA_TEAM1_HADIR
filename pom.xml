@@ -8,6 +8,12 @@
   <name>ProjectSQA_TEAM1_HADIR</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+    
+      <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.36</version>
+    </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
@@ -43,11 +49,13 @@
       <version>5.1.1</version>
       <scope>compile</scope>
     </dependency>
+    
     <dependency>
       <groupId>tech.grasshopper</groupId>
       <artifactId>extentreports-cucumber7-adapter</artifactId>
       <version>1.14.0</version>
     </dependency>
+
   </dependencies>
 
   <build>

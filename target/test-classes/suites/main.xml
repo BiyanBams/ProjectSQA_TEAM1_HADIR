@@ -4,7 +4,6 @@
   <test name="Import Status Aktif">
     <classes>
       <class name="com.juaracoding.hadir.runners.RunnerTest"></class>
-      
     </classes>
   </test>
 </suite>

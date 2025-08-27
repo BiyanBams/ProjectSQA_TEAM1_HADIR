@@ -4,9 +4,16 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-    features = "src/test/resources/features/LaporanKoreksi.feature", 
+    features = 
+    {
+        "src/test/resources/features/LaporanKoreksi.feature",
+        "src/test/resources/features/LaporanSakit.feature",
+        "src/test/resources/features/ImportCuti.feature",
+}, 
     glue = {"com.juaracoding.hadir.definitions.laporanfeature",
+    "com.juaracoding.hadir.definitions.importcuti",
             "com.juaracoding.hadir.definitions.cummonsteps",
+            "com.juaracoding.hadir.definitions.laporansakit",
             "com.juaracoding.hadir.definitions.hooks"
 },
 

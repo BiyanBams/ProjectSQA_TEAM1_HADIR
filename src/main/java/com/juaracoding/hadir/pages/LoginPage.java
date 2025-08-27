@@ -1,13 +1,15 @@
 package com.juaracoding.hadir.pages;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-  private WebDriver driver;
+ private WebDriver driver;
+
+  @FindBy(xpath = "//input[@id='email']")
+  private WebElement username;
 
   @FindBy(xpath = "//input[@id='email']")
   private WebElement email;

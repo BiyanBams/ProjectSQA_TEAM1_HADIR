@@ -2,34 +2,57 @@ package com.juaracoding.hadir.definitions.cummonsteps;
 
 import org.testng.Assert;
 
-import com.juaracoding.hadir.pages.DownloadAbsenPage;
-import com.juaracoding.hadir.pages.ImportStatusAktifPage;
-import com.juaracoding.hadir.pages.LaporanKoreksiPage;
+import com.juaracoding.hadir.pages.LaporanSakitPage;
+import com.juaracoding.hadir.pages.ImportCutiPage;
 import com.juaracoding.hadir.pages.LoginPage;
 import com.juaracoding.hadir.utils.DriverUtil;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import com.juaracoding.hadir.pages.DownloadAbsenPage;
+import com.juaracoding.hadir.pages.ImportStatusAktifPage;
+import com.juaracoding.hadir.pages.LaporanKoreksiPage;
+
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class CummonSteps {
     LoginPage loginPage = new LoginPage(DriverUtil.getDriver());
+    ImportCutiPage importCutiPage = new ImportCutiPage(DriverUtil.getDriver());
+    LaporanSakitPage laporanSakitPage = new LaporanSakitPage(DriverUtil.getDriver());
     ImportStatusAktifPage importPage = new ImportStatusAktifPage(DriverUtil.getDriver());
     LaporanKoreksiPage laporanKoreksiPage = new LaporanKoreksiPage(DriverUtil.getDriver());
     DownloadAbsenPage downloadAbsenPage = new DownloadAbsenPage(DriverUtil.getDriver());
 
-    // Step umum (bisa dipakai di semua scenario)
-
-    @Given("User login sebagai admin")
+     @Given("User login sebagai admin")
     public void user_login_sebagai_admin() {
         loginPage = new LoginPage(DriverUtil.getDriver());
         loginPage.performLogin();
     }
 
+
     @Given("User masuk ke dashboard")
     public void user_masuk_ke_dashboard() {
         Assert.assertTrue(importPage.isDashboardDisplayed(), "Dashboard tidak tampil!");
+    }
+
+
+    @Given("User masuk ke halaman Laporan sakit")
+    public void user_masuk_ke_halaman_laporan_sakit() {
+        laporanSakitPage.klikSubMenuLaporanSakit();
+    }
+
+    //==== untuk semua scenario bisa klik tombol search===
+    @When("Di Laporan sakit, User klik tombol Cari")
+    public void user_klik_tombol_cari_pada_laporan_sakit() {
+        laporanSakitPage.klikCari();
+    }
+
+    // ====== Halaman Import cuti =====
+    @Given("User masuk ke halaman import cuti")
+    public void user_masuk_ke_halaman_import_cuti() {
+        importCutiPage.clickMenuImport();
+        importCutiPage.clickSubmenuImportCuti();
     }
 
     // Halaman Import
