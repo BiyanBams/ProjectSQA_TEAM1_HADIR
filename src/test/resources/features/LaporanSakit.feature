@@ -8,7 +8,7 @@ Feature: Laporan Sakit
     And User masuk ke halaman Laporan sakit
     When User memasukkan nama di kolom search TLS1
     And User pilih tanggal mulai dan tanggal akhir TLS1
-    And User klik tombol Cari
+    And Di Laporan sakit, User klik tombol Cari
     Then Sistem menampilkan data laporan sakit sesuai yang dicari
 
   @positive
@@ -18,7 +18,7 @@ Feature: Laporan Sakit
     And User masuk ke halaman Laporan
     And User masuk ke halaman Laporan sakit
     When User memasukkan nama di kolom search TLS2
-    And User klik tombol Cari
+    And Di Laporan sakit, User klik tombol Cari
     Then Sistem menampilkan semua data laporan sakit berdasarkan nama yang dicari
 
    @positive
@@ -28,7 +28,7 @@ Feature: Laporan Sakit
     And User masuk ke halaman Laporan
     And User masuk ke halaman Laporan sakit
     When User pilih tanggal mulai dan tanggal akhir TLS3
-    And User klik tombol Cari
+    And Di Laporan sakit, User klik tombol Cari
     Then Sistem menampilkan semua data laporan sakit berdasarkan tanggal yang dicari
 
   @positive
@@ -39,7 +39,7 @@ Feature: Laporan Sakit
     And User masuk ke halaman Laporan sakit
     When User memasukkan nama di kolom search TLS4
     And User pilih tanggal mulai dan tanggal akhir TLS4
-    And User klik tombol Cari
+    And Di Laporan sakit, User klik tombol Cari
     Then Sistem menampilkan semua data laporan sakit berdasarkan tanggal yang dicari TLS4
     And User klik tombol Reset
     Then Sistem menghapus nama dan tanggal yang dicari oleh user
@@ -62,7 +62,7 @@ Feature: Laporan Sakit
     And User masuk ke halaman Laporan
     And User masuk ke halaman Laporan sakit
     And User memasukkan nama di kolom search TLS6
-    And User klik tombol Cari
+    And Di Laporan sakit, User klik tombol Cari
     When User klik tombol view
     Then Sistem menampilkan foto dengan jelas sesuai data yang dipilih
 
@@ -73,7 +73,7 @@ Feature: Laporan Sakit
     And User masuk ke halaman Laporan
     And User masuk ke halaman Laporan sakit
     And User memasukkan nama di kolom search TLS7
-    And User klik tombol Cari
+    And Di Laporan sakit, User klik tombol Cari
     When User klik tombol download
     Then Sistem menampilkan foto untuk diunduh
 
@@ -84,7 +84,7 @@ Feature: Laporan Sakit
     And User masuk ke halaman Laporan
     And User masuk ke halaman Laporan sakit
     When User memasukkan nama di kolom search TLS8
-    And User klik tombol Cari
+    And Di Laporan sakit, User klik tombol Cari
     Then Sistem tidak menampilkan data yang dicari atau data kosong TLS8
 
 @negative
@@ -95,7 +95,7 @@ Feature: Laporan Sakit
     And User masuk ke halaman Laporan sakit
     When User memasukkan nama di kolom search TLS9
     And User pilih tanggal invalid TLS9
-    And User klik tombol Cari
+    And Di Laporan sakit, User klik tombol Cari
     Then Sistem tidak menampilkan data yang dicari atau data kosong TLS9
 
 @negative
@@ -105,7 +105,7 @@ Feature: Laporan Sakit
     And User masuk ke halaman Laporan
     And User masuk ke halaman Laporan sakit
     When User pilih tanggal invalid TLS10
-    And User klik tombol Cari
+    And Di Laporan sakit, User klik tombol Cari
     Then Sistem tidak menampilkan data yang dicari atau data kosong TLS10
 
 @negative
@@ -126,7 +126,7 @@ Feature: Laporan Sakit
     And User masuk ke halaman Laporan
     And User masuk ke halaman Laporan sakit
     And User memasukkan nama di kolom search TLS12
-    And User klik tombol Cari
+    And Di Laporan sakit, User klik tombol Cari
     When User klik tombol view
     Then Sistem menampilkan foto yang tidak terlampir
 
@@ -137,7 +137,7 @@ Feature: Laporan Sakit
     And User masuk ke halaman Laporan
     And User masuk ke halaman Laporan sakit
     And User memasukkan nama di kolom search TLS13
-    And User klik tombol Cari
+    And Di Laporan sakit, User klik tombol Cari
     When User klik tombol download foto tidak terlampir
     Then Sistem tidak dapat mengunduh dan menampilkan pesan error 404
 

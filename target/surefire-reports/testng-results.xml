@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-27T17:08:24 WIB" name="IMPORT STATUS AKTIF TEST SUITE" finished-at="2025-08-27T17:09:50 WIB" duration-ms="86043">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.hadir.runners.RunnerTest@2a4fb17b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-08-27T17:08:24 WIB" name="Import Status Aktif" finished-at="2025-08-27T17:09:50 WIB" duration-ms="86043">
+      <class name="com.juaracoding.hadir.runners.RunnerTest">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.juaracoding.hadir.runners.RunnerTest@2a4fb17b]" started-at="2025-08-27T17:08:24 WIB" name="setUpClass" finished-at="2025-08-27T17:08:24 WIB" duration-ms="598" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@52efb338]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.hadir.runners.RunnerTest@2a4fb17b]" started-at="2025-08-27T17:08:24 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:08:30 WIB" duration-ms="5562" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User mencari laporan koreksi berdasarkan nama & tanggal Valid"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Laporan Koreksi"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.hadir.runners.RunnerTest@2a4fb17b]" started-at="2025-08-27T17:08:30 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:08:34 WIB" duration-ms="4522" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User mencari laporan koreksi berdasarkan nama yang valid/terdaftar"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Laporan Koreksi"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.hadir.runners.RunnerTest@2a4fb17b]" started-at="2025-08-27T17:08:34 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:08:39 WIB" duration-ms="5051" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User melakukan reset pada pencarian laporan koreksi dengan tanggal valid"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Laporan Koreksi"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.hadir.runners.RunnerTest@2a4fb17b]" started-at="2025-08-27T17:08:39 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:08:44 WIB" duration-ms="5093" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User mencari laporan koreksi berdasarkan filter untuk departemen yang ada"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Laporan Koreksi"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.hadir.runners.RunnerTest@2a4fb17b]" started-at="2025-08-27T17:08:44 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:08:59 WIB" duration-ms="14324" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User mencari laporan koreksi berdasarkan sebagian nama yang invalid"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Laporan Koreksi"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.hadir.runners.RunnerTest@2a4fb17b]" started-at="2025-08-27T17:08:59 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:09:18 WIB" duration-ms="19085" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User mencari laporan koreksi berdasarkan nama valid & tanggal invalid"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Laporan Koreksi"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.hadir.runners.RunnerTest@2a4fb17b]" started-at="2025-08-27T17:09:18 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:09:33 WIB" duration-ms="14742" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User input tanggal dengan format tidak valid"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Laporan Koreksi"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.hadir.runners.RunnerTest@2a4fb17b]" started-at="2025-08-27T17:09:33 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-27T17:09:47 WIB" duration-ms="14639" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User mencari laporan koreksi berdasarkan filter untuk departemen yang tidak ada"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Laporan Koreksi"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.juaracoding.hadir.runners.RunnerTest@2a4fb17b]" started-at="2025-08-27T17:09:47 WIB" name="tearDownClass" finished-at="2025-08-27T17:09:50 WIB" duration-ms="2391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.juaracoding.hadir.runners.RunnerTest -->
+    </test> <!-- Import Status Aktif -->
+  </suite> <!-- IMPORT STATUS AKTIF TEST SUITE -->
+</testng-results>

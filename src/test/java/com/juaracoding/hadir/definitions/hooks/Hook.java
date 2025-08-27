@@ -1,4 +1,5 @@
-package com.juaracoding.hadir.definitions.importcuti;
+package com.juaracoding.hadir.definitions.hooks;
+
 import java.time.Duration;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,6 +20,7 @@ public class Hook {
     // Buka URL aplikasi langsung di awal
     String baseUrl = "https://magang.dikahadir.com/authentication/login"; // <-- ganti sesuai URL project kamu
     DriverUtil.getDriver().get(baseUrl);
+    
   }
 
   @After
@@ -26,13 +28,6 @@ public class Hook {
     final byte[] screenshot = ((TakesScreenshot) DriverUtil.getDriver())
             .getScreenshotAs(OutputType.BYTES);
     scenario.attach(screenshot, "image/png", scenario.getName());
-    
-    // Delay sebelum menutup driver
-    try {
-        Thread.sleep(2000);
-    } catch (InterruptedException e) {
-        e.printStackTrace();
-    }
     DriverUtil.quitDriver();
   }
 }

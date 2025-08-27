@@ -11,20 +11,23 @@ public class LoginPage {
   @FindBy(xpath = "//input[@id='email']")
   private WebElement username;
 
+  @FindBy(xpath = "//input[@id='email']")
+  private WebElement email;
+
   @FindBy(xpath = "//input[@id='password']")
   private WebElement password;
 
-  @FindBy(xpath = "//button[normalize-space()='Masuk']")
+  @FindBy(xpath = "//*[@id=\"__next\"]/div/div/div[2]/div/div[2]/form/button")
   private WebElement loginButton;
 
-    
+
   public LoginPage(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(this.driver, this);
-}
+  }
 
-  public void setUsername(String value) {
-    username.sendKeys(value);
+  public void setEmail(String value) {
+    email.sendKeys(value);
   }
 
   public void setPassword(String value) {
@@ -36,13 +39,13 @@ public class LoginPage {
   }
 
   public void performLogin() {
-    setUsername("admin@hadir.com");
+    setEmail("admin@hadir.com");
     setPassword("MagangSQA_JC@123");
     clickLoginButton();
   }
 
-  public void performLogin(String username, String password) {
-    setUsername(username);
+  public void performLogin(String email, String password) {
+    setEmail(email);
     setPassword(password);
     clickLoginButton();
   }
