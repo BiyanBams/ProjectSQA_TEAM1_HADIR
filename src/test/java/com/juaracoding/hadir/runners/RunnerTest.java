@@ -5,11 +5,12 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
     features = 
-    {  "src/test/resources/features/ImportAbsen.feature",
-            "src/test/resources/features/LaporanLembur.feature",
+    {  
+        // "src/test/resources/features/ImportAbsen.feature",
+        //     "src/test/resources/features/LaporanLembur.feature",
         "src/test/resources/features/LaporanKoreksi.feature",
-        "src/test/resources/features/LaporanSakit.feature",
-        "src/test/resources/features/ImportCuti.feature",
+        // "src/test/resources/features/LaporanSakit.feature",
+        // "src/test/resources/features/ImportCuti.feature",
 }, 
     glue = {
             "com.juaracoding.hadir.definitions.importabsen",

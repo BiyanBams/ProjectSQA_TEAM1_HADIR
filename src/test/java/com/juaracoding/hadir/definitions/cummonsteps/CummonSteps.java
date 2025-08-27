@@ -1,78 +1,53 @@
 package com.juaracoding.hadir.definitions.cummonsteps;
 
-<<<<<<< HEAD
 import com.juaracoding.hadir.pages.ImportAbsenPage;
 import com.juaracoding.hadir.pages.LemburPage;
-import org.testng.Assert;
-=======
 import org.testng.Assert;
 
 import com.juaracoding.hadir.pages.LaporanSakitPage;
 import com.juaracoding.hadir.pages.ImportCutiPage;
->>>>>>> c4fa265491cbdee9ca8b09763361e15efb47de02
 import com.juaracoding.hadir.pages.LoginPage;
 import com.juaracoding.hadir.utils.DriverUtil;
 
 import io.cucumber.java.en.Given;
-<<<<<<< HEAD
-=======
 import com.juaracoding.hadir.pages.DownloadAbsenPage;
 import com.juaracoding.hadir.pages.ImportStatusAktifPage;
 import com.juaracoding.hadir.pages.LaporanKoreksiPage;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
->>>>>>> c4fa265491cbdee9ca8b09763361e15efb47de02
 import io.cucumber.java.en.When;
 
 public class CummonSteps {
-    LoginPage loginPage = new LoginPage(DriverUtil.getDriver());
-<<<<<<< HEAD
     ImportAbsenPage absenPage = new ImportAbsenPage(DriverUtil.getDriver());
     LemburPage lemburPage = new LemburPage(DriverUtil.getDriver());
+    LoginPage loginPage = new LoginPage(DriverUtil.getDriver());
+     ImportCutiPage importCutiPage = new ImportCutiPage(DriverUtil.getDriver());
+    LaporanSakitPage laporanSakitPage = new LaporanSakitPage(DriverUtil.getDriver());
+    ImportStatusAktifPage importPage = new ImportStatusAktifPage(DriverUtil.getDriver());
+    LaporanKoreksiPage laporanKoreksiPage = new LaporanKoreksiPage(DriverUtil.getDriver());
+    DownloadAbsenPage downloadAbsenPage = new DownloadAbsenPage(DriverUtil.getDriver());
 
-    // ================= STEP UMUM =================
-    @Given("User login sebagai admin")
-    public void user_login_sebagai_admin() throws InterruptedException {
-        loginPage = new LoginPage(DriverUtil.getDriver());
-        loginPage.performLogin();
-        Thread.sleep(3000);
-    }
-
-    @Given("User masuk ke dashboard")
-    public void user_masuk_ke_dashboard() {
-        Assert.assertTrue(absenPage.isDashboardDisplayed(), "Dashboard tidak tampil!");
-    }
-
-    // ====== Halaman Laporan lembur ====
-    @Given("User masuk ke halaman Laporan")
-    public void user_masuk_ke_halaman_laporan() {
-        lemburPage.klikMenuLaporan();
-    }
     @Given("User masuk ke halaman Laporan lembur")
     public void user_masuk_ke_halaman_laporan_lembur() {
+        lemburPage.klikMenuLaporan();
         lemburPage.klikSubMenuLaporanLembur();
     }
 
     //==== untuk semua scenario bisa klik tombol search===
-    @When("User klik tombol Cari")
-    public void user_klik_tombol_cari() {
+    @When("Pada laporan lembur, User klik tombol Cari")
+    public void user_klik_tombol_cari_laporan_lembur() {
         lemburPage.clickCariButton();
     }
-
+    
     // ====== Halaman Import absen =====
     @Given("User masuk ke halaman import absen")
     public void user_masuk_ke_halaman_import_absen() {
         absenPage.clickMenuImport();
         absenPage.clickSubmenuImportAbsen();
     }
-}
-=======
-    ImportCutiPage importCutiPage = new ImportCutiPage(DriverUtil.getDriver());
-    LaporanSakitPage laporanSakitPage = new LaporanSakitPage(DriverUtil.getDriver());
-    ImportStatusAktifPage importPage = new ImportStatusAktifPage(DriverUtil.getDriver());
-    LaporanKoreksiPage laporanKoreksiPage = new LaporanKoreksiPage(DriverUtil.getDriver());
-    DownloadAbsenPage downloadAbsenPage = new DownloadAbsenPage(DriverUtil.getDriver());
+
+   
 
      @Given("User login sebagai admin")
     public void user_login_sebagai_admin() {
@@ -155,4 +130,3 @@ public class CummonSteps {
                 "Gagal download laporan absen!");
     }
 }
->>>>>>> c4fa265491cbdee9ca8b09763361e15efb47de02
