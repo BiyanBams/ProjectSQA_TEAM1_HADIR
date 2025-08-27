@@ -1,0 +1,33 @@
+package com.juaracoding.hadir.runners;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(
+    features = 
+    {  "src/test/resources/features/ImportAbsen.feature",
+            "src/test/resources/features/LaporanLembur.feature",
+        "src/test/resources/features/LaporanKoreksi.feature",
+        "src/test/resources/features/LaporanSakit.feature",
+        "src/test/resources/features/ImportCuti.feature",
+}, 
+    glue = {
+            "com.juaracoding.hadir.definitions.importabsen",
+            "com.juaracoding.hadir.definitions.laporanlembur",
+            "com.juaracoding.hadir.definitions.laporanfeature",
+    "com.juaracoding.hadir.definitions.importcuti",
+            "com.juaracoding.hadir.definitions.cummonsteps",
+            "com.juaracoding.hadir.definitions.laporansakit",
+            "com.juaracoding.hadir.definitions.hooks"
+},
+
+        plugin = {
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "json:target/cucumber-reporting/reports.json",
+                "json:target/cucumber.json",
+                "pretty",
+                "html:target/cucumber-reporting/reports.html"
+        })
+public class RunnerTest extends AbstractTestNGCucumberTests {
+
+}

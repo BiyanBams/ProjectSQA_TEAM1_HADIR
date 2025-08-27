@@ -6,39 +6,48 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    WebDriver driver;
+ private WebDriver driver;
 
-    @FindBy(xpath = "//input[@id='email']")
-    private WebElement emailField;
+  @FindBy(xpath = "//input[@id='email']")
+  private WebElement username;
 
-    @FindBy(xpath = "//input[@id='password']")
-    private WebElement passwordField;
+  @FindBy(xpath = "//input[@id='email']")
+  private WebElement email;
 
-    @FindBy(xpath = "//button[@type='submit' and normalize-space()='Masuk']")
-    private WebElement loginbtn;
+  @FindBy(xpath = "//input[@id='password']")
+  private WebElement password;
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(this.driver, this);
-    }
+  @FindBy(xpath = "//*[@id=\"__next\"]/div/div/div[2]/div/div[2]/form/button")
+  private WebElement loginButton;
 
-    public void setEmail(String value) {
-        emailField.clear();
-        emailField.sendKeys(value);
-    }
 
-    public void setPassword(String value) {
-        passwordField.clear();
-        passwordField.sendKeys(value);
-    }
+  public LoginPage(WebDriver driver) {
+    this.driver = driver;
+    PageFactory.initElements(this.driver, this);
+  }
 
-    public void clickLoginButton() {
-        loginbtn.click();
-    }
+  public void setEmail(String value) {
+    email.sendKeys(value);
+  }
 
-    public void performLogin() {
-        setEmail("admin@hadir.com");
-        setPassword("MagangSQA_JC@123");
-        clickLoginButton();
-    }
+  public void setPassword(String value) {
+    password.sendKeys(value);
+  }
+
+  public void clickLoginButton() {
+    loginButton.click();
+  }
+
+  public void performLogin() {
+    setEmail("admin@hadir.com");
+    setPassword("MagangSQA_JC@123");
+    clickLoginButton();
+  }
+
+  public void performLogin(String email, String password) {
+    setEmail(email);
+    setPassword(password);
+    clickLoginButton();
+  }
+
 }
